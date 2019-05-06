@@ -25,9 +25,9 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 	conda install --yes numpy scipy pandas mkl mkl-devel && \
 	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json
 
-ENV TINI_VERSION v0.16.1
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini
+# ENV TINI_VERSION v0.16.1
+# ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+# RUN chmod +x /usr/bin/tini
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
+# ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
