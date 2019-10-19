@@ -1,7 +1,7 @@
 FROM continuumio/miniconda3
 
 RUN apt-get update --fix-missing && \
-    apt-get install -y wget bzip2 ca-certificates curl git gcc g++ clang make cmake && \
+    apt-get install -y wget bzip2 ca-certificates curl unzip tar git gcc g++ clang make cmake && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
