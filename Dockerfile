@@ -15,4 +15,6 @@ RUN cd /opt && \
 
 RUN ./opt/vcpkg/vcpkg install eigen3 nlohmann-json msgpack catch2
 
+ENV VCPKG_ROOT /opt/vcpkg
+
 CMD [ "/bin/bash" ]
