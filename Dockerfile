@@ -6,7 +6,9 @@ RUN apt-get update --fix-missing && \
     rm -rf /var/lib/apt/lists/*
 
 RUN conda install --yes numpy scipy pandas mkl mkl-devel && \
-	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json
+	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json && \
+	conda clean --all --yes
+
 
 RUN cd /opt && \
 	git clone https://github.com/Microsoft/vcpkg.git && \
