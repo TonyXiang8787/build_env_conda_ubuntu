@@ -8,11 +8,12 @@ RUN apt-get update --fix-missing && \
 RUN conda install --yes numpy scipy pandas mkl mkl-devel && \
 	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json
 
-RUN cd /opt &&
+RUN cd /opt && \
 	git clone https://github.com/Microsoft/vcpkg.git && \
 	cd vcpkg && \
-	./bootstrap-vcpkg.sh && \
-	./vcpkg install eigen3 nlohmann_json msgpack catch2
+	./bootstrap-vcpkg.sh
+
+RUN ./vcpkg install eigen3 nlohmann_json msgpack catch2
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
