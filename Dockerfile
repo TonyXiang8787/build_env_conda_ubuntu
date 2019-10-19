@@ -13,7 +13,6 @@ RUN cd /opt && \
 	cd vcpkg && \
 	./bootstrap-vcpkg.sh
 
-RUN ./vcpkg install eigen3 nlohmann_json msgpack catch2
+RUN ./opt/vcpkg/vcpkg install eigen3 nlohmann-json msgpack catch2
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
