@@ -11,7 +11,7 @@ pool:
 
 variables:
   dockerId: tonyxiang  # Replace with your Docker ID for Docker Hub or the admin user name for the Azure Container Registry
-  imageName: build_env_conda_ubuntu  # Replace with the name of the image you want to publish
+  imageName: build_env_conda_vcpkg  # Replace with the name of the image you want to publish
 
 
 steps:
