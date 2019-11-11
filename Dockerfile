@@ -18,5 +18,7 @@ RUN cd /opt && \
 RUN ./opt/vcpkg/vcpkg install eigen3 nlohmann-json msgpack catch2
 
 ENV VCPKG_ROOT /opt/vcpkg
+ENV MKL_INCLUDE /opt/conda/include
+ENV MKL_LIB /opt/conda/lib
 
 CMD [ "/bin/bash" ]
