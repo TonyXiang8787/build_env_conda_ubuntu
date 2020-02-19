@@ -17,7 +17,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     echo "conda activate base" >> ~/.bashrc && \
 	. /opt/conda/etc/profile.d/conda.sh && \
 	conda activate base && \
-	conda install --yes numpy scipy pandas mkl mkl-devel && \
+	conda install --yes cython numpy scipy pandas mkl mkl-devel && \
 	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json && \
 	conda clean --all --yes
 
