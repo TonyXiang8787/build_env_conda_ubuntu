@@ -18,7 +18,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 	. /opt/conda/etc/profile.d/conda.sh && \
 	conda activate base && \
 	conda install --yes numpy scipy pandas mkl mkl-devel && \
-	conda install --yes -c conda-forge msgpack-c boost-cpp nlohmann_json cython pytest black flake8 msgpack-python && \
+	conda install --yes -c conda-forge twine msgpack-c boost-cpp nlohmann_json cython pytest black flake8 msgpack-python && \
 	conda clean --all --yes
 
 RUN cd /opt && \
